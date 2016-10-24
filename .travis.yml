@@ -10,7 +10,9 @@ python:
   - "pypy"
 # command to install dependencies
 install:
-  - pip install .
-  - pip install -r requirements.txt
+  - sudo apt-get install python-dev
+  - pip install --upgrade pip 
+  - pip install Django 
 # command to run tests
-script: nosetests
+script: 
+  - python manage.py test
