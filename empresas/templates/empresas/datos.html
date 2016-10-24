@@ -1,0 +1,7 @@
+<h1>{{ empresa.nombre }}</h1>
+<h2>{{ empresa.correo }}</h2>
+<h3>{{ empresa.fecha_visita }}</h3>
+
+
+<button><a href="{% url 'valoraciones' empresa.id %}" style="text-decoration:none"> Valoración Completa</a></button>
+<button><a href="{% url 'puntuaciones' empresa.id %}" style="text-decoration:none">Puntuaciones</a></button>

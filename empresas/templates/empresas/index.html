@@ -1,0 +1,16 @@
+<h1><strong>LISTADO DE EMPRESAS VALORADAS</strong></h1>
+{% if lista_ultimas_empresas %}
+	<ul>
+	{% for empresa in lista_ultimas_empresas %}
+	<table BORDER CELLPADDING=10 CELLSPACING=0 WIDTH=30%>
+		<tr>
+			<td><a href="/empresas/{{ empresa.id }}/">{{ empresa.nombre }}</a></td>
+		</tr>
+	</table>
+	{% endfor %}
+	</ul>
+{% else %}
+    <p>No hay empresas.</p>
+{% endif %}
+
+<button><a href="/empresas/add_empresa/" style="text-decoration:none"><strong>Añadir Empresa</strong></a><br/></button>

@@ -1,0 +1,13 @@
+<h1>{{ empresa.nombre }}</h1>
+<h2>{{ empresa.correo }}</h2>
+<h3>{{ empresa.fecha_visita }}</h3>
+
+{% if puntuaciones_empresa %}
+	<ul>
+	{% for puntuacion in puntuaciones_empresa %}
+		<li><strong> Puntuacion: </strong>{{ puntuacion.puntuacion }}</li>
+	{% endfor %}
+	</ul>
+{% else %}
+    <p>No hay comentario.</p>
+{% endif %}
